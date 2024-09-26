@@ -1,5 +1,8 @@
 package ua.knu.csc.iss;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -14,5 +17,14 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        List<Option> options = new ArrayList<>();
+        options.add(new Option("1", "Vote for Alice"));
+        options.add(new Option("2", "Vote for Bob"));
+        options.add(new Option("3", "Proposal A: Increase funding for parks"));
+        options.add(new Option("4", "Proposal B: New public transport system"));
+
+        Ballot ballot = new Ballot("B001", "E001", options);
+        ballot.displayBallot();
     }
 }
