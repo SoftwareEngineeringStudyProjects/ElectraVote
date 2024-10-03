@@ -44,5 +44,10 @@ class BallotTest {
 
     @Test
     void isOptionPresent() {
+        assertTrue(ballot.isOptionPresent("1"), "Option 1 should be present in the ballot");
+        assertTrue(ballot.isOptionPresent("4"), "Option 4 should be present in the ballot");
+        assertFalse(ballot.isOptionPresent("01"), "Option O should not be present in the ballot");
+        assertFalse(ballot.isOptionPresent(""), "Empty option should not be present in the ballot");
+
     }
 }
