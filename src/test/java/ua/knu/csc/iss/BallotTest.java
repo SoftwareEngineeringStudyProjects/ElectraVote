@@ -40,6 +40,8 @@ class BallotTest {
     void getOptions() {
         assertEquals(4, ballot.getOptions().size());
         assertEquals("1", ballot.getOptions().get(0).getOptionId());
+        assertEquals(new Option("2", "Vote for Bob") , ballot.getOptions().get(1));
+        assertNotSame(new Option("2", "Vote for Bob") , ballot.getOptions().get(1));
     }
 
     @Test
@@ -50,4 +52,30 @@ class BallotTest {
         assertFalse(ballot.isOptionPresent(""), "Empty option should not be present in the ballot");
 
     }
+
+    static class TestClass {
+        public TestClass(int id) {
+            this.id = id;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        // You can add methods and fields for testing purposes here
+        private int id;
+        public void printTestMessage() {
+            System.out.println("This is a test message from the TestClass!");
+        }
+    }
+
+    @Test
+    void equalsMethodIsHereOrNot() {
+        TestClass tc1 = new TestClass(1);
+        TestClass tc2 = new TestClass(1);
+
+        assertFalse(tc1 == tc2);
+        assertFalse( tc1.equals(tc2) );
+    }
+
 }
