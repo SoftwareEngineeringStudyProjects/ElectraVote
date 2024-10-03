@@ -38,7 +38,7 @@ public class Ballot {
     }
 
     // Method to check if an option exists in the ballot
-    public boolean isOptionValid(String optionId) {
+    public boolean isOptionPresent(String optionId) {
         return options.stream().anyMatch(option -> option.getOptionId().equals(optionId));
     }
 }
