@@ -1,3 +1,4 @@
 # Glossary - terms and definitions
-* Ballot - contains list of options. Also known as Poll (but in this project we call it Ballot)
+* Ballot - result of single vote by someone.Contains list of options that were chosen.  NOT same as Poll.
+* Election - event when voting occurs, maintains list of ballots, allows calculating results
 * Option - a single option that can be voted for. Could be a candidate, or some proposal, or anything
